@@ -3,7 +3,7 @@ function anim() {
     elem.className += " anim";
 
     setTimeout(function() {
-        document.location.href = "users.html";
+        document.location.href = "users";
     }, 1000);
     
 }
