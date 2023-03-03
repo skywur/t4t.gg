@@ -107,6 +107,9 @@ body {
 .card .badges .badge[data-type="user"] {
     background:rgb(146, 146, 240);
 }
+.card .badges .badge[data-type="meat"] {
+    background:rgb(189, 8, 2);
+}
 
 .card .linkcontainer {
     width: 70%;
