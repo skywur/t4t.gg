@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap');
+
+
+
+
+
+body {
+    height: 100vh;
+    margin: 0;
+    background: rgb(var(--bg1));
+  }
+
+.main {
+    width: 100vw;
+    height: 100vh;
+    background: 
+        radial-gradient(
+        farthest-side at bottom left,
+        rgba(var(--bg2), 0.5), 
+        transparent
+        ),
+        radial-gradient(
+        farthest-corner at bottom right,
+        rgba(var(--bg3), 0.5), 
+        transparent 400px
+        );
+}
+
+.card {
+    background: rgb(var(--card));
+    width: clamp(500px, 20%, 20%);
+    height: 70%;
+    border-radius: 25px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 5px 5px 30px 5px rgba(0, 0, 0, 0.2);
+}
+
+.card .pfp {
+    border-radius: 50%;
+    width: 40%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 25px;
+    border: 10px rgb(var(--accent)) solid;
+    box-shadow: 0px 0px 10px 5px rgba(var(--accent), 0.5);
+}
+
+.card .username {
+    color: black;
+    font-size: 30px;
+    text-align: center;
+    margin-top: 10px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 1000;
+}
+
+.card .pronouns {
+    font-size: 12px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 1000;
+    display: flex;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: max-content;
+    
+}
+.card .pronouns .pronoun {
+    background: linear-gradient(to right, rgb(var(--prn1)), rgb(var(--prn2)));
+    margin-left: auto;
+    margin-right: auto;
+    color:white;
+    padding: 5px;
+    margin: 0px 5px;
+    border-radius: 25px;
+    width: max-content;
+}
+
+.card .badges {
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+}
+.card .badges .badge {
+    margin: 10px;
+    padding: 6px 15px;
+    border-radius: 25px;
+    background:red;
+    display: flex;
+    align-items: center;
+    
+}
+.card .badges .badge[data-type="dev"] {
+    background: rgb(78, 0, 131);
+}
+.card .badges .badge[data-type="alpha"] {
+    background:rgb(33, 137, 207);
+}
+.card .badges .badge[data-type="user"] {
+    background:rgb(146, 146, 240);
+}
+
+.card .linkcontainer {
+    width: 70%;
+    height: 5%;
+    margin: 10px;
+    border-radius: 25px;
+    background: rgb(var(--accent));
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    transition: 0.3s;
+    cursor:pointer;
+
+}
+
+.card .linkcontainer .text {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+}
+
+.card .linkcontainer svg {
+    width: 25px;
+    height: 25px;
+    margin-right: 10px;
+    float: right;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    fill: white;
+    transition: 0.2s ease-out;
+}
+
+
+.credits {
+    position: absolute;
+    bottom: 0;
+    margin: 5px;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+}
+.credits .button {
+   color: rgb(174, 119, 238);
+   display: inline-block;
+   font-weight: 1000;
+   cursor: pointer;
+}
+
+
+#discord:hover, #discord:hover svg {
+    color: #5865F2; 
+    fill: #5865F2; 
+}
+#twitter:hover, #twitter:hover svg {
+    color: #1DA1F2;
+    fill: #1DA1F2;
+}
+#github:hover, #github:hover svg {
+    color: #686262;
+    fill: #686262;
+}
+#youtube:hover, #youtube:hover svg {
+    color: #FF0000;
+    fill: #FF0000;
+}
+#steam:hover, #steam:hover svg {
+    color:#000000;
+    fill:#000000;
+}
+#spotify:hover, #spotify:hover svg {
+    color: #1DB954;
+    fill: #1DB954;
+}
+#switch:hover, #switch:hover svg {
+    color: #E60012;
+    fill: #E60012;
+}
+#custom:hover, #custom:hover svg {
+    color: rgb(255, 27, 225);
+    fill: rgb(255, 27, 225);
+}

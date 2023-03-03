@@ -1,0 +1,370 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap');
+
+body {
+    background: #df9ef3;
+    font-family: "mc";
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    font-family: 'Montserrat', sans-serif;
+    transition: color 0.3s ease-in;
+    animation: fadein 2s forwards;
+    max-width: 100%;
+    overflow-x: hidden;
+    padding: 0;
+    margin: 0;
+}
+
+@font-face {
+    font-family: "mc";
+    src: url("regular.otf") format("opentype");
+}
+
+.main {
+    width: 100vw;
+    height: 100vh;
+    background: 
+        radial-gradient(
+        farthest-side at bottom left,
+        rgba(0, 204, 255, 0.5), 
+        transparent
+        ),
+        radial-gradient(
+        farthest-corner at bottom right,
+        rgba(162, 48, 255, 0.5), 
+        transparent 400px
+        );
+}
+@keyframes shift {
+    0% {
+        filter: hue-rotate(0deg)
+    }
+    50% {
+        filter: hue-rotate(50deg);
+    }
+    100% {
+        filter: hue-rotate(0deg);
+    }
+}
+
+#enter {
+    background-color: #000;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 5;
+    position: absolute;
+    transition: .3s ease-in;
+    font-size: 24px;
+}
+
+#enter p {
+    transition: all .3s ease-in;
+}
+
+#enter p:hover {
+    color: #7700FF;
+}
+
+.landing {
+    width: 100%;
+    position: absolute;
+    text-align: center;
+    top: 30%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    
+}
+
+.landing-logo {
+    width: 20em;
+}
+
+.landing .logo {
+    position: relative;
+    padding: 25px;
+    font-size: 20px;
+    transition: 0.3s;
+    font-weight: bolder;
+    filter: none;
+}
+.landing .logo::before {
+    content: attr(data-before);
+    position: absolute;
+    top:1.5%;
+    left:0;
+    width: 100%;
+    height: 100%;
+
+    
+    background: linear-gradient(300deg, #00d2ff 20%,#ffa6b9 0 40%,#fff 0 60%,#ffa6b9 0 80%,#00d2ff 0);
+    background-clip: text;
+    text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    z-index: -1;
+}
+.landing .logo::after {
+    content: attr(data-before);
+    position: absolute;
+    top:1.5%;
+    left:0;
+    width: 100%;
+    height: 100%;
+
+    
+    background: linear-gradient(300deg, #00d2ff 20%,#ffa6b9 0 40%,#fff 0 60%,#ffa6b9 0 80%,#00d2ff 0);
+    background-clip: text;
+    text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    z-index: -2;
+    filter: blur(5px);
+    transition:0.3s;
+    opacity: 0%;
+    transform: scale(110%);
+}
+.landing .logo:hover {
+    color: transparent;
+    opacity: 100%;
+    scale: 110%;
+}
+.landing .logo:hover::after {
+    opacity: 100%;
+}
+.dev {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    font-size: 15px;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.landing a {
+    color: #fff;
+    text-decoration: none;
+    transition: ease-in-out .1s;
+}
+
+.landing a:hover {
+    color: #7700FF;
+    text-decoration: none;
+}
+
+.landing .archive {
+    font-weight: bold;
+    font-size: 2em;
+    
+}
+
+.landing .contact {
+    font-weight: bold;
+}
+
+
+/* Media query */
+
+@media (max-width: 1000px) {
+    #enter {
+        display: none;
+    }
+    .body {
+        width: 100%;
+    }
+    .landing {
+        width: 100%;
+    }
+    pre {
+        font-size: 9px;
+    }
+}
+
+@keyframes fadein {
+    0% {
+        opacity: 0
+    }
+    100% {
+        opacity: 1
+    }
+}
+
+.container {
+    position: absolute;
+    top: 15%;
+    width: 75%;
+    height: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.container>#box {
+    aspect-ratio: 1/1.5;
+    width: 15%;
+    max-width: 165px;
+    margin: 5% 8%;
+    text-align: center;
+    opacity: 0;
+    animation: fadein 2s forwards;
+    animation-delay: calc(var(--order) * 150ms);
+    transition: 0.3s;
+}
+
+.container>#box>img {
+    width: 90%;
+    border-radius: 50%;
+}
+
+.container>#box>h3 {
+    font-size: 2vw;
+    color: gray;
+}
+
+.container>#box:nth-child(-n+2) {
+    margin: 5% 13%;
+}
+
+.container>#box:hover {
+    transform: scale(125%);
+}
+
+
+#back {
+    position: absolute;
+    left: 5%;
+    width: 50px;
+}
+
+#back svg {
+    fill: rgb(29, 29, 29);
+    transition: all 0.3s;
+}
+
+#back svg:hover {
+    fill: rgb(59, 59, 59);
+}
+
+@media screen and (max-width: 699px) {
+    .container {
+        margin-bottom: 10%;
+    }
+    .container>#box {
+        opacity: 0;
+        aspect-ratio: 1;
+        width: 50%;
+        margin-bottom: 0;
+        padding: 10%;
+    }
+    .container>#box:nth-child(-n+2) {
+        margin-bottom: 0;
+    }
+    .container>#box>h3 {
+        font-size: 4vw;
+        color: gray;
+    }
+}
+
+
+
+
+
+
+/*------*/
+
+:root {
+    --purple: rgb(123, 31, 162);
+    --violet: rgb(103, 58, 183);
+    --pink: rgb(255, 163, 247);
+}
+
+@keyframes background-pan {
+    from {
+        background-position: 0% center;
+    }
+    to {
+        background-position: -200% center;
+    }
+}
+
+@keyframes scale {
+    from,
+    to {
+        transform: scale(0);
+    }
+    50% {
+        transform: scale(1);
+    }
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(180deg);
+    }
+}
+
+h3>.magic {
+    display: inline-block;
+    position: relative;
+}
+
+h3>.magic>.magic-star {
+    --size: clamp(20px, 1.5vw, 30px);
+    animation: scale 700ms ease forwards;
+    display: block;
+    height: var(--size);
+    left: var(--star-left);
+    position: absolute;
+    top: var(--star-top);
+    width: var(--size);
+}
+
+h3>.magic>.magic-star>svg {
+    animation: rotate 1000ms linear infinite;
+    display: block;
+    opacity: 0.7;
+}
+
+h3>.magic>.magic-star>svg>path {
+    fill: var(--violet);
+}
+
+h3>.magic>.magic-text {
+    animation: background-pan 3s linear infinite;
+    background: linear-gradient( to right, var(--purple), var(--violet), var(--pink), var(--purple));
+    background-size: 200%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    white-space: nowrap;
+}
+
+
+@keyframes slideUp {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(-200%);
+    }
+}
+
+.anim {
+    animation: slideUp 1s forwards;
+}
