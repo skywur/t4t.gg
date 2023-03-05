@@ -31,17 +31,16 @@
       <div class="users">
         <div class="header">Users</div>
 
-        <div class="list">
-          <a href="skylar" class="user" style="--order: 1;"><img src="img/skylar.jpg" alt="pfp">skylar</a>
-          <a href="sami" class="user" style="--order: 2;"><img src="img/Sami.jpg" alt="pfp">Sami</a>
-          <a href="cdevan" class="user" style="--order: 3;"><img src="img/cdevan.jpg" alt="pfp">cdevan</a>
-          <a href="logab" class="user" style="--order: 4;"><img src="img/logab.jpg" alt="pfp">logab</a>
-          <a href="headfone" class="user" style="--order: 5;"><img src="img/headfone.jpg" alt="pfp">headfone</a>
-          <a href="meef" class="user" style="--order: 6;"><img src="img/meef.png" alt="pfp">meef</a>
-          <a href="ellie" class="user" style="--order: 7;"><img src="img/ellie.jpg" alt="pfp">ellie</a>
-          <a href="wtr" class="user" style="--order: 8;"><img src="img/wtr.jpg" alt="pfp">wtr</a>
-          <a href="avery" class="user" style="--order: 9;"><img src="img/avery.jpg" alt="pfp">avery</a>
-          
+        <div class="list" id="usersList">
+          <a href="skylar" class="user"><img src="img/skylar.jpg" alt="pfp">skylar</a>
+          <a href="sami" class="user"><img src="img/Sami.jpg" alt="pfp">Sami</a>
+          <a href="cdevan" class="user"><img src="img/cdevan.jpg" alt="pfp">cdevan</a>
+          <a href="logab" class="user"><img src="img/logab.jpg" alt="pfp">logab</a>
+          <a href="headfone" class="user"><img src="img/headfone.jpg" alt="pfp">headfone</a>
+          <a href="meef" class="user"><img src="img/meef.png" alt="pfp">meef</a>
+          <a href="ellie" class="user"><img src="img/ellie.jpg" alt="pfp">ellie</a>
+          <a href="wtr" class="user"><img src="img/wtr.jpg" alt="pfp">wtr</a>
+          <a href="avery" class="user"><img src="img/avery.jpg" alt="pfp">avery</a>
           
             
         </div>
@@ -49,5 +48,13 @@
       </div>
 
     </div>
+    <script>
+      let usersList = document.getElementById("usersList");
+      var children = usersList.children;
+      for(var i=0; i<children.length; i++){
+          var child = children[i];
+          child.style.setProperty("--order", i)
+      }
+    </script>
 </body>
 </html>
